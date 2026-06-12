@@ -21,7 +21,6 @@ st.set_page_config(
 aplicar_tema()
 st.markdown("""
 <style>
-.jaum-header > img { height: 78px !important; }
 /* Botón "Abrir" (st.page_link) con aspecto de botón verde dentro del card */
 [data-testid="stPageLink"] { margin-top: 4px; }
 [data-testid="stPageLink"] a {
@@ -45,6 +44,7 @@ page_header(
     "Fotos y Comentarios de Campo",
     "Registros fotográficos y observaciones de las evaluaciones · Stine Argentina",
     bandeira=bandeira_ar_html(),
+    img_altura=78,
 )
 
 # Layout: texto + cards (izquierda, más angosta) | ilustración grande (derecha)
@@ -92,7 +92,7 @@ with col_esq:
   </p>
 </div>
 """, unsafe_allow_html=True)
-        st.page_link("pages/2_Milho.py", label="Abrir Maíz", icon="➡️")
+        st.page_link("pages/2_Maiz.py", label="Abrir Maíz", icon="➡️")
 
 with col_dir:
     img_path = asset_path("App_development-amico.png")

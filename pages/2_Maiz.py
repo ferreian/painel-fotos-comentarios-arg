@@ -1,5 +1,5 @@
 """
-pages/2_Milho.py — Fotos y Comentarios · Maíz (Argentina)
+pages/2_Maiz.py — Fotos y Comentarios · Maíz (Argentina)
 
 Wrapper fino: toda la lógica está en pagina_fotos.render().
 "Milho" se mantiene como argumento porque es el nombre de la tabla en Supabase;
