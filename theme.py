@@ -242,9 +242,10 @@ def bandeira_ar_html() -> str:
     )
 
 
-def page_header(titulo: str, subtitulo: str = "", imagem: str = "", bandeira: str = ""):
+def page_header(titulo: str, subtitulo: str = "", imagem: str = "", bandeira: str = "", img_altura: int = None):
     """
     Header padrão: [logo ou ilustração] | [título / subtítulo] [bandeira].
+    img_altura: altura da logo/ilustração em px (aplicada inline, vence o CSS).
     """
     src = None
     if imagem:
@@ -257,8 +258,9 @@ def page_header(titulo: str, subtitulo: str = "", imagem: str = "", bandeira: st
     if src is None:
         src = logo_base64()
 
+    estilo_img = f' style="height:{img_altura}px;width:auto;"' if img_altura else ""
     logo_html = (
-        f'<img src="{src}" />'
+        f'<img src="{src}"{estilo_img} />'
         if src
         else '<span style="font-size:1.4rem;font-weight:700;color:#27AE60;">🌱</span>'
     )
