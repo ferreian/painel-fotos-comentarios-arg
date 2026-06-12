@@ -137,11 +137,11 @@ def _galeria(df_fotos: pd.DataFrame):
 .foto-coment-item{{margin-bottom:4px;}}
 .foto-coment-item:last-child{{margin-bottom:0;}}
 .ov{{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;
-  align-items:center;justify-content:flex-start;flex-direction:column;padding-top:4vh;overflow:auto;}}
-.ov.on{{display:flex;}}
-.ov .hint{{color:#D1D5DB;font-size:12px;margin-bottom:10px;display:flex;align-items:center;gap:6px;}}
+  overflow:auto;padding:24px 0 200px;text-align:center;}}
+.ov.on{{display:block;}}
+.ov .hint{{color:#D1D5DB;font-size:12px;margin-bottom:10px;display:inline-flex;align-items:center;gap:6px;}}
 .ov .hint b{{color:#fff;background:rgba(255,255,255,.18);border-radius:4px;padding:1px 6px;font-weight:600;}}
-.ov img{{max-width:88vw;max-height:72vh;object-fit:contain;border-radius:8px;}}
+.ov img{{max-width:88vw;max-height:72vh;object-fit:contain;border-radius:8px;display:block;margin:0 auto;}}
 .ov .info{{color:#fff;text-align:center;margin-top:12px;}}
 .ov .ti{{font-size:18px;font-weight:700;}}
 .ov .su{{font-size:13px;color:#D1D5DB;margin-top:4px;}}
@@ -200,7 +200,7 @@ def render(cultura: str, icone: str = "📷", imagem: str = ""):
         "Registros fotográficos y observaciones de campo · Argentina",
         imagem=imagem,
         bandeira=bandeira_ar_html(),
-        img_altura=170,
+        img_altura=200,
     )
 
     with st.spinner(f"Cargando registros de {rotulo}..."):
